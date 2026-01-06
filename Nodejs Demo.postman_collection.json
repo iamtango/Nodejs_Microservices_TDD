@@ -1,0 +1,694 @@
+{
+	"info": {
+		"_postman_id": "63d6e54d-d24a-4a92-bcfa-a28394343009",
+		"name": "Nodejs Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50503857",
+		"_collection_link": "https://vedang-nikure-1956325.postman.co/workspace/Vedang-Nikure's-Workspace~2f762e77-cf0f-487b-8d49-63a5e9d4c2c7/collection/50503857-63d6e54d-d24a-4a92-bcfa-a28394343009?action=share&source=collection_link&creator=50503857"
+	},
+	"item": [
+		{
+			"name": "Register send email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Vedang Nikure\", \"email\": \"vedang@gmail.com\" , \"password\": \"vedang@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/api/auth/register",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register send sms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Vedang Nikure\", \"email\": \"vedang@gmail.com\" , \"password\": \"vedang@123\", \"notificationPreference\": \"sms\",\n  \"phoneNumber\": \"+1234567890\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/api/auth/register",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register a New User with Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Vedang Nikure\", \"email\": \"vedang112@gmail.com\" , \"password\": \"vedang@123\", \"referralCodeUsed\":\"23B9FCB6\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/api/auth/register",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"vedang@gmail.com\",\n    \"password\": \"vedang@123\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/api/auth/login",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL1}}/api/auth/profile",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order confirmation notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL1}}/api/auth/notify-order",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"notify-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order confirmation notification Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL1}}/api/auth/notify-order",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"notify-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Fruits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Fruit by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits?id=694a322526619c571f0c7b9d",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "694a322526619c571f0c7b9d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get page  with items per page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits?page=2&limit=10",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Fruits with Active Offers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits?hasOffer=true",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits"
+					],
+					"query": [
+						{
+							"key": "hasOffer",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Fruits by Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits?category=General",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "General"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Fruits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits?q=apple",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "apple"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Fruit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Guava\",\n    \"price\": 60,\n    \"description\": \"Fresh Guava\",\n    \"category\": \"General\",\n    \"stockQuantity\": 100,\n    \"offerType\": \"BUY_2_GET_3_FREE\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Fruit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 15,\n    \"offerType\": \"BUY_1_GET_1_FREE\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits/694a327a26619c571f0c7b9f",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits",
+						"694a327a26619c571f0c7b9f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Fruit",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL2}}/api/fruits/694a32a526619c571f0c7ba1",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"fruits",
+						"694a32a526619c571f0c7ba1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User's Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{baseURL2}}/api/cart",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Item to Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fruitId\": \"694bbc2956997ebc68216351\",\n    \"quantity\": 1\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL2}}/api/cart/items",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Item Quantity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"quantity\": 1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL2}}/api/cart/items/694a46737ee432335de46e0a",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"items",
+						"694a46737ee432335de46e0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Item from Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL2}}/api/cart/items/694a32a526619c571f0c7ba1",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"items",
+						"694a32a526619c571f0c7ba1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear Entire Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL2}}/api/cart",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paymentMethod\": \"UPI\",\n    \"notes\": \"Please deliver between 10am-2pm\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL2}}/api/cart/checkout",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL2}}/api/cart/transactions",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL2}}/api/cart/transactions/694a4a2b7aeaad7772640e32",
+					"host": [
+						"{{baseURL2}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"transactions",
+						"694a4a2b7aeaad7772640e32"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL11",
+			"value": ""
+		},
+		{
+			"key": "baseURL22",
+			"value": ""
+		},
+		{
+			"key": "baseURL1",
+			"value": ""
+		},
+		{
+			"key": "baseURL2",
+			"value": ""
+		}
+	]
+}
